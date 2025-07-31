@@ -66,18 +66,18 @@ class _SelfieRegisterUserScreenState extends State<SelfieRegisterUserScreen> {
     availableCams = await availableCameras();
     if (availableCams.any(
       (element) =>
-          element.lensDirection == CameraLensDirection.front &&
+          element.lensDirection == CameraLensDirection.back &&
           element.sensorOrientation == 90,
     )) {
       _cameraIndex = availableCams.indexOf(
         availableCams.firstWhere((element) =>
-            element.lensDirection == CameraLensDirection.front &&
+            element.lensDirection == CameraLensDirection.back &&
             element.sensorOrientation == 90),
       );
     } else {
       _cameraIndex = availableCams.indexOf(
         availableCams.firstWhere(
-          (element) => element.lensDirection == CameraLensDirection.front,
+          (element) => element.lensDirection == CameraLensDirection.back,
         ),
       );
     }
