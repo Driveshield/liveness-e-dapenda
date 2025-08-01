@@ -6,13 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:liveness_detection_flutter_plugin2/index.dart';
+import 'package:liveness_detection_flutter_plugin/index.dart';
 
 List<CameraDescription> availableCams = [];
 
 class LivenessDetectionScreen extends StatefulWidget {
+  final int indexcam ;
   final LivenessConfig config;
-  const LivenessDetectionScreen({super.key, required this.config});
+  const LivenessDetectionScreen({super.key, required this.config, required this.indexcam});
 
   @override
   State<LivenessDetectionScreen> createState() =>
@@ -20,6 +21,7 @@ class LivenessDetectionScreen extends StatefulWidget {
 }
 
 class _LivenessDetectionScreenState extends State<LivenessDetectionScreen>
+
     with TickerProviderStateMixin {
   AnimationController? controller;
   Animation<double>? animation;
@@ -72,6 +74,7 @@ class _LivenessDetectionScreenState extends State<LivenessDetectionScreen>
 
   @override
   Widget build(BuildContext context) {
+    int indexcam = widget.indexcam;
     // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async {
@@ -97,27 +100,85 @@ class _LivenessDetectionScreenState extends State<LivenessDetectionScreen>
 
   void _postFrameCallBack() async {
     availableCams = await availableCameras();
-    if (availableCams.any(
-      (element) =>
+
+    if (widget.indexcam == 1){
+    // var indexcam = widget ;
+    // if (indexcam == 1){
+      if (availableCams.any(
+            (element) =>
+        element.lensDirection == CameraLensDirection.front &&
+            element.sensorOrientation == 90,
+      )
+      ) {
+        _cameraIndex = availableCams.indexOf(
+          availableCams.firstWhere((element) =>
+          element.lensDirection == CameraLensDirection.front &&
+              element.sensorOrientation == 90),
+        );
+      } else {
+        _cameraIndex = availableCams.indexOf(
+          availableCams.firstWhere(
+                (element) => element.lensDirection == CameraLensDirection.front,
+          ),
+        );
+      }
+      if (!widget.config.startWithInfoScreen) {
+        _startLiveFeed();
+      }
+    }
+    ///kamera belakang
+    else{
+      if (availableCams.any(
+            (element) =>
+        element.lensDirection == CameraLensDirection.back &&
+            element.sensorOrientation == 90,
+      )
+      ) {
+        _cameraIndex = availableCams.indexOf(
+          availableCams.firstWhere((element) =>
           element.lensDirection == CameraLensDirection.back &&
-          element.sensorOrientation == 90,
-    )) {
-      _cameraIndex = availableCams.indexOf(
-        availableCams.firstWhere((element) =>
-            element.lensDirection == CameraLensDirection.back &&
-            element.sensorOrientation == 90),
-      );
-    } else {
-      _cameraIndex = availableCams.indexOf(
-        availableCams.firstWhere(
-          (element) => element.lensDirection == CameraLensDirection.back,
-        ),
-      );
+              element.sensorOrientation == 90),
+        );
+      } else {
+        _cameraIndex = availableCams.indexOf(
+          availableCams.firstWhere(
+                (element) => element.lensDirection == CameraLensDirection.back,
+          ),
+        );
+      }
+      if (!widget.config.startWithInfoScreen) {
+        _startLiveFeed();
+      }
+
     }
-    if (!widget.config.startWithInfoScreen) {
-      _startLiveFeed();
-    }
+
+
+
   }
+
+  // void _postFrameCallBack() async {
+  //   availableCams = await availableCameras();
+  //   if (availableCams.any(
+  //     (element) =>
+  //         element.lensDirection == CameraLensDirection.front &&
+  //         element.sensorOrientation == 90,
+  //   )) {
+  //     _cameraIndex = availableCams.indexOf(
+  //       availableCams.firstWhere((element) =>
+  //           element.lensDirection == CameraLensDirection.front &&
+  //           element.sensorOrientation == 90),
+  //     );
+  //   } else {
+  //     _cameraIndex = availableCams.indexOf(
+  //       availableCams.firstWhere(
+  //         (element) => element.lensDirection == CameraLensDirection.front,
+  //       ),
+  //     );
+  //   }
+  //   if (!widget.config.startWithInfoScreen) {
+  //     _startLiveFeed();
+  //   }
+  // }
 
   void _startLiveFeed() async {
     final camera = availableCams[_cameraIndex];
@@ -437,8 +498,10 @@ class _LivenessDetectionScreenState extends State<LivenessDetectionScreen>
         break;
       case LivenessDetectionStep.yaw:
         // TODO: Handle this case.
+        break;
       case LivenessDetectionStep.pitch:
         // TODO: Handle this case.
+        break;
     }
   }
 

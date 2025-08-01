@@ -1,4 +1,4 @@
-# liveness_detection_flutter_plugin2
+# liveness_detection_flutter_plugin
 
 A new Flutter plugin project.
 
@@ -15,3 +15,4 @@ samples, guidance on mobile development, and a full API reference.
 
 # e-dapenda
 # e-dapenda
+# liveness-e-dapenda

@@ -38,7 +38,7 @@ public final class GeneratedPluginRegistrant {
     try {
       flutterEngine.getPlugins().add(new com.bagussubagja.liveness_detection_flutter_plugin.LivenessDetectionFlutterPlugin());
     } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin liveness_detection_flutter_plugin2, com.bagussubagja.liveness_detection_flutter_plugin.LivenessDetectionFlutterPlugin", e);
+      Log.e(TAG, "Error registering plugin liveness_detection_flutter_plugin, com.bagussubagja.liveness_detection_flutter_plugin.LivenessDetectionFlutterPlugin", e);
     }
   }
 }

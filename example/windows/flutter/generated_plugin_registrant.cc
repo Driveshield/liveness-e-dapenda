@@ -6,7 +6,7 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <liveness_detection_flutter_plugin2/liveness_detection_flutter_plugin_c_api.h>
+#include <liveness_detection_flutter_plugin/liveness_detection_flutter_plugin_c_api.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
   LivenessDetectionFlutterPluginCApiRegisterWithRegistrar(

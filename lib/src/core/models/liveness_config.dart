@@ -1,4 +1,4 @@
-import 'package:liveness_detection_flutter_plugin2/index.dart';
+import 'package:liveness_detection_flutter_plugin/index.dart';
 
 class LivenessConfig {
    /// Types of checks to be added while detecting the face.

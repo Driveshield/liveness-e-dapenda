@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  liveness_detection_flutter_plugin2
+  liveness_detection_flutter_plugin
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

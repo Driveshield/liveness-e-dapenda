@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/rendering.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
-import 'package:liveness_detection_flutter_plugin2/src/core/helpers/index.dart';
+import 'package:liveness_detection_flutter_plugin/src/core/helpers/index.dart';
 
 import '../../../liveness_detection_flutter_plugin.dart';
 

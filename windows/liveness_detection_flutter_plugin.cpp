@@ -1,4 +1,4 @@
-#include "liveness_detection_flutter_plugin2.h"
+#include "liveness_detection_flutter_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -13,14 +13,14 @@
 #include <memory>
 #include <sstream>
 
-namespace liveness_detection_flutter_plugin2 {
+namespace liveness_detection_flutter_plugin {
 
 // static
 void LivenessDetectionFlutterPlugin::RegisterWithRegistrar(
     flutter::PluginRegistrarWindows *registrar) {
   auto channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          registrar->messenger(), "liveness_detection_flutter_plugin2",
+          registrar->messenger(), "liveness_detection_flutter_plugin",
           &flutter::StandardMethodCodec::GetInstance());
 
   auto plugin = std::make_unique<LivenessDetectionFlutterPlugin>();

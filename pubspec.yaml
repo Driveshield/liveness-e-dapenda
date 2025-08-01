@@ -1,12 +1,11 @@
-name: liveness_detection_flutter_plugin2
+name: liveness_detection_flutter_plugin
 description: Liveness Detection by Google MLKit
 version: 0.0.4
 homepage: "https://bagussubagja.vercel.app"
 repository: "https://github.com/bagussubagja/liveness-detection-flutter-plugin"
 
 environment:
-#  sdk: ">=2.19.6 <3.0.0"
-  sdk: ">=3.2.3 <4.0.0"
+  sdk: ">=2.19.6 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:

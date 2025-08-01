@@ -1,7 +1,5 @@
 // ignore_for_file: implementation_imports
-import 'package:liveness_detection_flutter_plugin2 /index.dart';
 import 'package:liveness_detection_flutter_plugin/index.dart';
-
 
 void main() {
   runApp(const MaterialApp(
@@ -109,6 +107,7 @@ class _HomePageState extends State<HomePage> {
               : const SizedBox.shrink(),
           ElevatedButton(
               onPressed: () async {
+                LivenessDetectionFlutterPlugin.instance.indexcam = 0;
                 final String? response = (await LivenessDetectionFlutterPlugin
                     .instance
                     .livenessDetection(
@@ -125,14 +124,16 @@ class _HomePageState extends State<HomePage> {
               child: const Text('Sistem Liveness Detection')),
           ElevatedButton(
               onPressed: () async {
+
+                // final LivenessDetectionFlutterPlugin;
                 final List<String?> listFace =
-                    await LivenessDetectionFlutterPlugin.instance
-                        .selfiesRegisterUser(
+                    await LivenessDetectionFlutterPlugin.instance.selfiesRegisterUser(
                   context,
                   config: LivenessConfig(
                     steps: stepSelfies,
                   ),
                 );
+
                 setState(() {
                   capturedImages = listFace;
                 });
