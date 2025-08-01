@@ -188,7 +188,7 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "liveness_detection_flutter_plugin",
+      "name": "liveness_detection_flutter_plugin2",
       "rootUri": "../../",
       "packageUri": "lib/",
       "languageVersion": "3.2"
@@ -320,7 +320,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2025-07-31T01:30:44.030301Z",
+  "generated": "2025-08-01T00:02:01.779430Z",
   "generator": "pub",
   "generatorVersion": "3.4.4",
   "flutterRoot": "file:///C:/Users/Dragonfly/Documents/projectku/edapenda/.fvm/flutter_sdk",

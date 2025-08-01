@@ -9,6 +9,6 @@ export 'package:flutter/material.dart';
 export 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
 
 export './src/index.dart';
-export './liveness_detection_flutter_plugin.dart';
+export './liveness_detection_flutter_plugin2.dart';
 export './liveness_detection_flutter_plugin_method_channel.dart';
 export './liveness_detection_flutter_plugin_platform_interface.dart';

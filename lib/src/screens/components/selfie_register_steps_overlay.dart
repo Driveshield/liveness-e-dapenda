@@ -1,4 +1,4 @@
-import 'package:liveness_detection_flutter_plugin/index.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
 
 class SelfieRegisterStepsOverlay extends StatefulWidget {
   final List<LivenessDetectionStepItem> steps;

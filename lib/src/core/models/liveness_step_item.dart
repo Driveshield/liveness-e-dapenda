@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_this
 
-import 'package:liveness_detection_flutter_plugin/index.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
 
 class LivenessDetectionStepItem {
   final LivenessDetectionStep step;

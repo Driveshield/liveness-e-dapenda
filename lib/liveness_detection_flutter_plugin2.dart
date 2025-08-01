@@ -1,5 +1,5 @@
-import 'package:liveness_detection_flutter_plugin/index.dart';
-import 'package:liveness_detection_flutter_plugin/src/screens/selfie_register_user_screen.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
+import 'package:liveness_detection_flutter_plugin2/src/screens/selfie_register_user_screen.dart';
 
 class LivenessDetectionFlutterPlugin {
   LivenessDetectionFlutterPlugin._privateConstructor();

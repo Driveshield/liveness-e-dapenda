@@ -1,4 +1,5 @@
-import 'package:liveness_detection_flutter_plugin/index.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
 
 class LivenessDetectionTutorialScreen extends StatefulWidget {
   final VoidCallback onStartTap;

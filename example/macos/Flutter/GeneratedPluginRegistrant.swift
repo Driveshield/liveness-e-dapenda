@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import liveness_detection_flutter_plugin
+import liveness_detection_flutter_plugin2
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   LivenessDetectionFlutterPlugin.register(with: registry.registrar(forPlugin: "LivenessDetectionFlutterPlugin"))

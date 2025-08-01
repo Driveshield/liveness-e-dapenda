@@ -24,10 +24,10 @@
 @import google_mlkit_face_detection;
 #endif
 
-#if __has_include(<liveness_detection_flutter_plugin/LivenessDetectionFlutterPlugin.h>)
-#import <liveness_detection_flutter_plugin/LivenessDetectionFlutterPlugin.h>
+#if __has_include(<liveness_detection_flutter_plugin2/LivenessDetectionFlutterPlugin.h>)
+#import <liveness_detection_flutter_plugin2/LivenessDetectionFlutterPlugin.h>
 #else
-@import liveness_detection_flutter_plugin;
+@import liveness_detection_flutter_plugin2;
 #endif
 
 @implementation GeneratedPluginRegistrant

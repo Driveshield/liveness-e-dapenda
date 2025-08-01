@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:ui' as ui;
 import 'package:collection/collection.dart';
-import 'package:liveness_detection_flutter_plugin/index.dart';
+import 'package:liveness_detection_flutter_plugin2/index.dart';
 
 List<CameraDescription> availableCams = [];
 
